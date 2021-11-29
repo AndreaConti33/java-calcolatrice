@@ -15,159 +15,113 @@ class CalcoliHelper {
 
 	}
 
-	// Getters and setters
-	public static int getA() {
-		return a;
-	}
-
-	public static void setA(int a) {
-		CalcoliHelper.a = a;
-	}
-
-	public static int getB() {
-		return b;
-	}
-
-	public static void setB(int b) {
-		CalcoliHelper.b = b;
-	}
-
-	public static double getC() {
-		return c;
-	}
-
-	public static void setC(double c) {
-		CalcoliHelper.c = c;
-	}
-
-	public static double getD() {
-		return d;
-	}
-
-	public static void setD(double d) {
-		CalcoliHelper.d = d;
-	}
-
 	// Metodi
 
 	// Somma tra due interi
-	public static int sommaInt() {
-		int sommaInt = a + b;
-		return sommaInt;
+	public static int somma(int somma) {
+		return a + b;
 	}
 
 	// Somma tra due double
-	public static double sommaDouble() {
-		double sommaDouble = c + d;
-		return sommaDouble;
+	public static double somma(double somma) {
+		return c + d;
 	}
 
 	// Differenza tra due numeri interi
-	public static int differenzaInt() {
-		int differenzaInt = a - b;
-		return differenzaInt;
+	public static int differenza(int differenza) {
+		return a - b;
 	}
 
 	// Differenza tra due numeri double
-	public static double differenzaDouble() {
-		double differenzaDouble = c - d;
-		return differenzaDouble;
+	public static double differenza(double differenza) {
+		return c - d;
 	}
 
 	// Moltiplicazione di due numeri interi
-	public static int moltiplicazioneInt() {
-		int moltiplicazioneInt = a * b;
-		return moltiplicazioneInt;
+	public static int moltiplicazione(int moltiplicazione) {
+		return a * b;
 	}
 
 	// Moltiplicazione di due numeri double
-	public static double moltiplicazioneDouble() {
-		double moltiplicazioneDouble = c * d;
-		return moltiplicazioneDouble;
+	public static double moltiplicazione(double moltiplicazione) {
+		return c * d;
 	}
 
 	// Valore assoluto di un numero intero
-	public static int valoreAssolutoInt() {
-		int valoreAssolutoInt = Math.abs(a);
-		return valoreAssolutoInt;
+	public static int valoreAssoluto(int valoreAssoluto) {
+		if (a < 0) {
+			valoreAssoluto = a *= -1;
+		} else {
+			valoreAssoluto = a;
+		}
+		return valoreAssoluto;
 	}
 
 	// Valore assoluto di un numero double
-	public static double valoreAssolutoDouble() {
-		double valoreAssolutoDouble = Math.abs(c);
-		return valoreAssolutoDouble;
+	public static double valoreAssoluto(double valoreAssoluto) {
+		if (c < 0) {
+			valoreAssoluto = c *= -1;
+		} else {
+			valoreAssoluto = c;
+		}
+		return valoreAssoluto;
 	}
 
 	// Minimo tra due numeri interi
-	public static int minoreInt() {
-		int minoreInt;
+	public static int minore(int minore) {
 		if (a < b) {
-			minoreInt = a;
+			minore = a;
 		} else {
-			minoreInt = b;
+			minore = b;
 		}
-		return minoreInt;
+		return minore;
 	}
 
 	// Minimo tra due numeri double
-	public static double minoreDouble() {
-		double minoreDouble;
+	public static double minore(double minore) {
 		if (c < d) {
-			minoreDouble = c;
+			minore = c;
 		} else {
-			minoreDouble = d;
+			minore = d;
 		}
-		return minoreDouble;
+		return minore;
 	}
 
 	// Massimo tra due numeri interi
-	public static int maggioreInt() {
-		int maggioreInt;
+	public static int maggiore(int maggiore) {
 		if (a > b) {
-			maggioreInt = a;
+			maggiore = a;
 		} else {
-			maggioreInt = b;
+			maggiore = b;
 		}
-		return maggioreInt;
+		return maggiore;
 	}
 
 	// Massimo tra due numeri interi
-	public static double maggioreDouble() {
-		double maggioreDouble;
+	public static double maggiore(double maggiore) {
 		if (c > d) {
-			maggioreDouble = c;
+			maggiore = c;
 		} else {
-			maggioreDouble = d;
+			maggiore = d;
 		}
-		return maggioreDouble;
+		return maggiore;
 	}
-	
+
 	// Elevamento alla postenza di interi
-	
-	public static double potenza(int b, int pow) {
-		int risultato = 1;
-		double base1 = b;
-		double esponente1 = pow;
-		if(pow > 0) {
-			for (int i = 0; i <= pow; i++) {
-				risultato *= b;
-			}
-			} else if (pow < 0) {
-				return -esponente1 / base1;
+
+	public static double potenza(double base, double esponente) {
+		double potenza = 1;
+		if (esponente == 0) {
+			potenza = 1;
 		}
-		return risultato;
+		if (esponente < 0) {
+			base = 1 / base;
+			potenza = base * -esponente;
+		}
+		for (double i = 1; i <= esponente; ++i) {
+			potenza = potenza * base;
+		}
+		return potenza;
 	}
-	
-//	public static int potenzaInteri() {
-//		int potenzaInt = (int) Math.pow(a, b);
-//		return potenzaInt;
-//	}
-//	
-//	// Elevamento alla potenza di double
-//	
-//	public static double potenzaDouble() {
-//		double potenzaDouble = Math.pow(c, d);
-//		return potenzaDouble;
-//	}
-	
+
 }
