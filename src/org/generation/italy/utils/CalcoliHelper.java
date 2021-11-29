@@ -144,16 +144,30 @@ class CalcoliHelper {
 	
 	// Elevamento alla postenza di interi
 	
-	public static int potenzaInteri() {
-		int potenzaInt = (int) Math.pow(a, b);
-		return potenzaInt;
+	public static double potenza(int b, int pow) {
+		int risultato = 1;
+		double base1 = b;
+		double esponente1 = pow;
+		if(pow > 0) {
+			for (int i = 0; i <= pow; i++) {
+				risultato *= b;
+			}
+			} else if (pow < 0) {
+				return -esponente1 / base1;
+		}
+		return risultato;
 	}
 	
-	// Elevamento alla potenza di double
-	
-	public static double potenzaDouble() {
-		double potenzaDouble = Math.pow(c, d);
-		return potenzaDouble;
-	}
+//	public static int potenzaInteri() {
+//		int potenzaInt = (int) Math.pow(a, b);
+//		return potenzaInt;
+//	}
+//	
+//	// Elevamento alla potenza di double
+//	
+//	public static double potenzaDouble() {
+//		double potenzaDouble = Math.pow(c, d);
+//		return potenzaDouble;
+//	}
 	
 }
