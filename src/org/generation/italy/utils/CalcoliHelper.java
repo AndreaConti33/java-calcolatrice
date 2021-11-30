@@ -1,110 +1,95 @@
 package org.generation.italy.utils;
 
-import java.lang.Math;
-
 class CalcoliHelper {
-
-	// Attributi
-	private static int a;
-	private static int b;
-	private static double c;
-	private static double d;
 
 	// Costruttori
 	private CalcoliHelper() {
-
 	}
 
 	// Metodi
 
 	// Somma tra due interi
-	public static int somma(int somma) {
+	public static int somma(int a, int b) {
 		return a + b;
 	}
 
 	// Somma tra due double
-	public static double somma(double somma) {
+	public static double somma(double c, double d) {
 		return c + d;
 	}
 
 	// Differenza tra due numeri interi
-	public static int differenza(int differenza) {
+	public static int differenza(int a, int b) {
 		return a - b;
 	}
 
 	// Differenza tra due numeri double
-	public static double differenza(double differenza) {
+	public static double differenza(double c, double d) {
 		return c - d;
 	}
 
 	// Moltiplicazione di due numeri interi
-	public static int moltiplicazione(int moltiplicazione) {
+	public static int moltiplicazione(int a, int b) {
 		return a * b;
 	}
 
 	// Moltiplicazione di due numeri double
-	public static double moltiplicazione(double moltiplicazione) {
+	public static double moltiplicazione(double c, double d) {
 		return c * d;
 	}
 
 	// Valore assoluto di un numero intero
-	public static int valoreAssoluto(int valoreAssoluto) {
+	public static int valoreAssoluto(int a) {
 		if (a < 0) {
-			valoreAssoluto = a *= -1;
+			return a *= -1;
 		} else {
-			valoreAssoluto = a;
+			return a;
 		}
-		return valoreAssoluto;
 	}
 
 	// Valore assoluto di un numero double
-	public static double valoreAssoluto(double valoreAssoluto) {
+	public static double valoreAssoluto(double c) {
 		if (c < 0) {
-			valoreAssoluto = c *= -1;
+			return c *= -1;
 		} else {
-			valoreAssoluto = c;
+			return c;
 		}
-		return valoreAssoluto;
 	}
 
 	// Minimo tra due numeri interi
-	public static int minore(int minore) {
+	public static int minore(int a, int b) {
 		if (a < b) {
-			minore = a;
+			return a;
 		} else {
-			minore = b;
+			return b;
 		}
-		return minore;
 	}
 
 	// Minimo tra due numeri double
-	public static double minore(double minore) {
+	public static double minore(double c, double d) {
 		if (c < d) {
-			minore = c;
+			return c;
 		} else {
-			minore = d;
+			return d;
 		}
-		return minore;
 	}
 
 	// Massimo tra due numeri interi
-	public static int maggiore(int maggiore) {
+	public static int maggiore(int a, int b) {
 		if (a > b) {
-			maggiore = a;
+			return a;
 		} else {
-			maggiore = b;
+			return b;
 		}
-		return maggiore;
 	}
 
 	// Massimo tra due numeri interi
-	public static double maggiore(double maggiore) {
+	public static double maggiore(double c, double d) {
 		if (c > d) {
-			maggiore = c;
+			return c;
 		} else {
-			maggiore = d;
+			return d;
 		}
-		return maggiore;
 	}
 
 	// Elevamento alla postenza di interi
